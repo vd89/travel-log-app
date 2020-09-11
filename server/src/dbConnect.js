@@ -1,8 +1,9 @@
 /** @format */
 
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const mongoUri = process.env.DATABASE_URL || 'mongodb://127.0.0.1:27017/travel-log';
+const mongoUri = process.env.DATABASE_URL;
 const mongoOpt = { useNewUrlParser: true, useUnifiedTopology: true };
 
 const dbConnect = async () => {
